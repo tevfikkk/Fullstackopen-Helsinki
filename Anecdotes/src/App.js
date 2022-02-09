@@ -22,7 +22,7 @@ const App = () => {
 	const setToSelected = () =>
 		setSelected(Math.floor(Math.random() * anecdotes.length))
 	const handleVote = () => {
-		setVotes(votes.map((val, i) => (selected === i ? val + 1 : val))) // increases the number of voted anecdotes
+		setVotes(votes.map((val, i) => (selected === i ? val + 1 : val))) 
 	}
 
 	return (
@@ -35,7 +35,7 @@ const App = () => {
 			<br />
 			<Button onClick={setToSelected} text="Random Anecdotes" />
 			<h1>Anecdotes with most votes</h1>
-			{anecdotes[votes.indexOf(Math.max(...votes))]} // shown the most anecdote
+			{anecdotes[votes.indexOf(Math.max(...votes))]} // shows the most anecdote
 		</div>
 	)
 }
